@@ -1,0 +1,59 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: #009578;
+}
+
+main {
+  padding: 0 1rem;
+}
+.note_title {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+#note_app {
+  margin: 5rem 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, clamp(300px, 50%, 400px));
+  gap: 2rem;
+}
+
+.note {
+  height: clamp(300px, 50vw, 400px);
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.176);
+  resize: none;
+  background: #1b1b1b;
+  color: #dddddd;
+}
+
+.add_note {
+  border-radius: 1rem;
+  height: clamp(300px, 50vw, 430px);
+  font-size: 17rem;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.176);
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.add_note:is(:hover, :focus-visible) {
+  background: rgba(0, 0, 0, 0.3);
+}
